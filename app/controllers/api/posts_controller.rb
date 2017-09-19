@@ -1,7 +1,8 @@
 class Api::PostsController < ApplicationController
+
   def index
-  render json: Post.all.to_json( only: [:id, :title], methods: :img_url)
-end
+    render json: Post.all.to_json( only: [:id, :title], methods: :img_url)
+  end
 
   def create
     attrs = params.permit(:title, :img)
@@ -16,4 +17,5 @@ end
   def destroy
     Post.find(params[:id]).destroy
   end
+  
 end

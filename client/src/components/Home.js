@@ -17,7 +17,7 @@ class Home extends React.Component {
   }
 
   render() {
-    // let { user: { uid } } = this.props;
+    // let { user: { uid } } = this.props;``
     let { posts } = this.state;
 
     let formPosts = posts.map( p => <Post key={p.id} {...p} /> );
